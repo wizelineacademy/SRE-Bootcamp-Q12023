@@ -36,7 +36,7 @@ describe('protectFunction()', function () {
   });
 
     it('Test protected with invalid token', function () {
-    expect("jwt malformed").to.be.equal(protectFunction("invalid_token"));
+    expect("forbidden").to.be.equal(protectFunction("invalid_token"));
   });
 
   it('Test protected with empty token', function () {

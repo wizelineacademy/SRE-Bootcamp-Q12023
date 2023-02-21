@@ -76,7 +76,7 @@ export const protectFunction = (authorization) => {
 
     const parts = token.split(".");
     if (parts.length !== 3) {
-        return "jwt malformed";
+        return "forbidden";
     }
     const payload = Buffer.from(parts[1], "base64").toString();
     const { role } = JSON.parse(payload);
