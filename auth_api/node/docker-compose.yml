@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+
+  nodedj:
+    image: sre:v1
+    #build: .
+    volumes:
+      - ./services:/usr/src/app/services
+      - ./routes:/usr/src/app/routes
+      - ./test:/usr/src/app/test  
+    ports:
+      - "8000:8000"
