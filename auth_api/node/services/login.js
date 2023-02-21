@@ -29,6 +29,6 @@ export const loginFunction = (username, password) => {
     const jwt = require ('jsonwebtoken');
     const token = jwt.sign ({
             'role' : salida.data.rows[0].role
-    }, 'my2w7wjd7yXF64FIADfJxNs1oupTGAuW');
+    }, 'my2w7wjd7yXF64FIADfJxNs1oupTGAuW',{noTimestamp:true});
     return (token);
 }

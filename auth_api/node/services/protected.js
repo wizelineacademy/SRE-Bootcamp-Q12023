@@ -19,7 +19,7 @@ export const protectFunction = (authorization) => {
     }
     const jwt= require ('jsonwebtoken');
     try {
-        let decoded =jwt.verify(token,'my2w7wjd7yXF64FIADfJxNs1oupTGAuW');
+        let decoded =jwt.verify(token,'my2w7wjd7yXF64FIADfJxNs1oupTGAuW',{noTimestamp:true});
         return "You are under protected data";
     } catch (e) {
         return e.message;
