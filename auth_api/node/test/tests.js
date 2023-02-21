@@ -40,15 +40,15 @@ describe('protectFunction()', function () {
   });
 
   it('Test protected with empty token', function () {
-    expect("jwt must be provided").to.be.equal(protectFunction(""));
+    expect("forbidden").to.be.equal(protectFunction(""));
   });
 
   it('Test protected with null token', function () {
-    expect("null").to.be.equal(protectFunction(null));
+    expect("forbidden").to.be.equal(protectFunction(null));
   });
 
   it('Test protected with undefined token', function () {
-    expect("null").to.be.equal(protectFunction(undefined));
+    expect("forbidden").to.be.equal(protectFunction(undefined));
   });
 
 });
