@@ -12,3 +12,4 @@ EXPOSE 8000
 CMD [ "npm", "start" ]
 # App must run on port 8000
 # Add your instructions to dockerize the application
+#My image in Docker Hub: udecdj2022/bootcamp:v1
